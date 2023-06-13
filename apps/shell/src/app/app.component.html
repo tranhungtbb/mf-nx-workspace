@@ -1,2 +1,12 @@
-<fast-food-app-nx-welcome></fast-food-app-nx-welcome>
+
+<button [routerLink]="['/']">Home</button>
+<br/>
+<button [routerLink]="['/about']">About</button>
+<br/>
+<button (click)="onClick()">Navigate with param</button>
+<br/>
+<button (click)="sendDataWithEvent()">SendData with event</button>
+<br/>
+<button (click)="login()">Login</button>
+
 <router-outlet></router-outlet>
