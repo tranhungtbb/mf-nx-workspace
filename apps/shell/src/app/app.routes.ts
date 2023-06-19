@@ -1,14 +1,9 @@
 import { Route } from '@angular/router';
-import { loadRemoteModule } from '@nrwl/angular/mf';
+import { HomeComponent } from './home/home.component';
+
 
 export const appRoutes: Route[] =
 [
-    {
-        path: 'about',
-        loadChildren: () => loadRemoteModule('about', './Module').then((m) => m.RemoteEntryModule),
-    },
-    {
-        path: 'about/:id/:key',
-        loadChildren: () => loadRemoteModule('about', './Module2').then((m) => m.RemoteEntryModule),
-    }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
 ];

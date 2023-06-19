@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
-  {
+    {
     path: '',
     loadChildren: () =>
-      import('./about/about.module').then((m) => m.AboutModule),
-  },
+        import('./news/news.module').then((m) => m.NewsModule),
+    },
 ];

@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="container">
+        <app-welcome title="News"></app-welcome>
+        <div *ngFor="let item of news">
+            <a  class="button-pill rounded shadow nx-console">
+                <img style="height: 80px; width: 80px; object-fit: cover; border-radius: 4px;" src="{{ item.image }}">
+                <span [routerLink]="['detail', item.id]"> {{ item.title }} 
+                    <span> {{ item.description }}</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
